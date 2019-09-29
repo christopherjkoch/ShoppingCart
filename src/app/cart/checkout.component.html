@@ -9,12 +9,12 @@
 
         <mat-table [dataSource]="data" matSort matSortDisableClear class="mat-elevation-z8">
             <ng-container matColumnDef="productName">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>Product</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Checkout Item</mat-header-cell>
                 <mat-cell *matCellDef="let row">{{row.productName}}</mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="price">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>Price including Sales Tax</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Price including Tax</mat-header-cell>
                 <mat-cell *matCellDef="let row">{{row.price | currency:'USD':'symbol':'1.2-2'}}</mat-cell>
             </ng-container>
 

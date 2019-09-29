@@ -3,6 +3,7 @@ import { Observable, of } from "rxjs";
 import { IProduct } from '../products/product';
 import { CartService } from './cart.service';
 import { Router } from '@angular/router';
+import { CartCalculatorService } from './cart-calculator.service';
 
 @Component({
     selector: 'app-cart',
@@ -17,6 +18,7 @@ export class CartComponent implements OnInit {
 
     constructor(
         private cartService: CartService,
+        private cartCalculatorService: CartCalculatorService,
         public router: Router
     ) { }
 
@@ -24,12 +26,8 @@ export class CartComponent implements OnInit {
         this.cartService.getItems()
             .then(cart => {
                 this.data = of(cart);
-                this.calculateTotal(cart);
+                this.total = this.cartCalculatorService.calculateTotal(cart);
             })
-    }
-
-    calculateTotal(cart: IProduct[]) {
-        this.total = cart.reduce((total: number, item: any) => total + item.price, 0);
     }
 
     back() {

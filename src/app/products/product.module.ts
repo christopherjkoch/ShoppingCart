@@ -23,6 +23,7 @@ import {
 import { CartService } from '../cart/cart.service';
 import { CartComponent } from '../cart/cart.component';
 import { CheckoutComponent } from '../cart/checkout.component';
+import { CartCalculatorService } from '../cart/cart-calculator.service';
 
 @NgModule({
     imports: [
@@ -42,6 +43,6 @@ import { CheckoutComponent } from '../cart/checkout.component';
         MatSnackBarModule,
     ],
     declarations: [ProductListComponent, ProductDetailComponent, CartComponent, CheckoutComponent, CheckoutComponent],
-    providers: [ProductService, CartService],
+    providers: [ProductService, CartService, CartCalculatorService],
 })
 export class ProductModule { }
