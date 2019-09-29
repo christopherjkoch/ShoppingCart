@@ -1,0 +1,28 @@
+<div class="mat-app-background basic-container">
+
+    <mat-toolbar color="primary">
+        <span>Product Detail</span>
+    </mat-toolbar>
+
+    <div class="spinner-container" *ngIf="loading">
+        <mat-spinner color="warn"></mat-spinner>
+    </div>
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>{{product?.productName}}</mat-card-title>
+            <mat-card-subtitle>{{product?.productCategory}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{product?.price | currency:'USD':'symbol':'1.2-2'}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" class="button" (click)="addToCart()" >Add to Cart</button>
+            <button mat-raised-button  class="button" (click)="back()">Back</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-error class="error-message" *ngIf="errorMessage != null">{{ errorMessage }}</mat-error>
+</div>

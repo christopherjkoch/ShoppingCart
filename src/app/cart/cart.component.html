@@ -1,0 +1,42 @@
+<div class="mat-app-background basic-container">
+
+    <mat-toolbar color="primary">
+        <span>Cart</span>
+    </mat-toolbar>
+
+
+    <div class="table-container">
+
+        <mat-table [dataSource]="data" matSort matSortDisableClear class="mat-elevation-z8">
+            <ng-container matColumnDef="productName">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Cart Item</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.productName}}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Price</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.price | currency:'USD':'symbol':'1.2-2'}}</mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="visibleColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: visibleColumns;"></mat-row>
+        </mat-table>
+
+    </div>
+
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Summary</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                Total: {{total | currency:'USD':'symbol':'1.2-2'}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" class="button" (click)="checkout()">Go to Checkout</button>
+            <button mat-raised-button class="button" (click)="back()">Continue Shopping</button>
+            <button mat-raised-button class="button" (click)="emptyCart()">Empty Cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

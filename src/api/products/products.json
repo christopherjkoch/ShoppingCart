@@ -1,0 +1,65 @@
+[
+    {
+      "productId": 1,
+      "productName": "16lb bag of Skittles",
+      "productCategory": "Candy",
+      "price": 16.00,
+      "isImported": false
+    },
+    {
+      "productId": 2,
+      "productName": "Walkman",
+      "productCategory": "Electronics",
+      "price": 99.99,
+      "isImported": false
+    },
+    {
+      "productId": 3,
+      "productName": "bag of microwave Popcorn",
+      "productCategory": "Popcorn",
+      "price": 0.99,
+      "isImported": false
+    },
+    {
+      "productId": 4,
+      "productName": "imported bag of Vanilla-Hazelnut Coffee",
+      "productCategory": "Coffee",
+      "price": 11.00,
+      "isImported": true
+    },
+    {
+      "productId": 5,
+      "productName": "Imported Vespa",
+      "productCategory": "Scooter",
+      "price": 15001.25,
+      "isImported": true
+    },
+    {
+      "productId": 6,
+      "productName": "imported crate of Almond Snickers",
+      "productCategory": "Candy",
+      "price": 75.99,
+      "isImported": true
+    },
+    {
+      "productId": 7,
+      "productName": "Discman",
+      "productCategory": "Electronics",
+      "price": 55.00,
+      "isImported": false
+    },
+    {
+      "productId": 8,
+      "productName": "Imported Bottle of Wine",
+      "productCategory": "Alcohol",
+      "price": 10.00,
+      "isImported": true
+    },
+    {
+      "productId": 9,
+      "productName": "300# bag of Fair-Trade Coffee",
+      "productCategory": "Coffee",
+      "price": 997.99,
+      "isImported": false
+    }
+  ]
