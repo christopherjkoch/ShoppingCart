@@ -2,15 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
-Use case to add products to the cart:
+Use case to add products to the cart: 
+
 •	Navigate to the product list 
+
 •	Click on view button for a product to view the product details 
+
 •	Click on add to cart button to add a product to the cart 
+
+
 Use case to calculate taxes and print receipt 
+
 •	Click on the cart button in the header toolbar on the product list page 
+
 •	Click on go to checkout button 
+
 o	Checkout page contains the price including tax for each item, total cost of the items and total amount of sales tax paid 
+
 •	Click place order and print receipt to write the receipt details to the debug window  
+
 
 
 ## Development server
