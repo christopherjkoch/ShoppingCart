@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Observable, of } from "rxjs";
+import { Component, OnInit } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { ProductService } from './product.service';
 import { IProduct } from './product';
 import { finalize } from 'rxjs/operators';
@@ -13,7 +13,7 @@ import { CartService } from '../cart/cart.service';
 })
 export class ProductDetailComponent implements OnInit {
 
-    loading: boolean = true;
+    loading = true;
     product: IProduct;
     errorMessage: string;
     productId: number;
@@ -38,10 +38,10 @@ export class ProductDetailComponent implements OnInit {
         const productsObservable = this.productService.getProducts();
         productsObservable
             .pipe(
-                finalize(() => { this.loading = false })
+                finalize(() => { this.loading = false; })
             )
             .subscribe(response => {
-                this.product = response.find(p => p.productId == this.productId);
+                this.product = response.find(p => p.productId === this.productId);
             }, (err: any) => {
                 console.log(err);
                 this.errorMessage = 'Unable to load product';

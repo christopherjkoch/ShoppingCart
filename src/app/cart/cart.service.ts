@@ -4,20 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-    items = [];
-  
-    addToCart(product) {
-      this.items.push(product);
-    }
-  
-    getItems() {
-      //return this.items;
+  items = [];
 
-      return Promise.resolve(this.items);
-    }
-  
-    clearCart() {
-      this.items = [];
-      return this.items;
-    }
+  addToCart(product) {
+    this.items.push(product);
   }
+
+  getItems() {
+    return Promise.resolve(this.items);
+  }
+
+  clearCart() {
+    this.items = [];
+    return this.items;
+  }
+}
