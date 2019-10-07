@@ -1,6 +1,6 @@
 # CkStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+I built this shopping cart application in less than 8 hours.  The purpose of this application is to demonstrate my technical skill in Angular and JavaScript.  And also, to demonstrate how much I can get done in one work day.    
 
 Use case to add products to the cart: 
 
